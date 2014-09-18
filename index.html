@@ -1,0 +1,447 @@
+<!-- 
+    Responsive HTML Email Template
+    Copyright (c) 2014, Nick Silva.
+
+    https://github.com/antisilent/responsive-html-email
+    nowhearthis@antisilent.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+
+    <style type="text/css">
+
+      body {
+        font-family: georgia, 'times new roman', serif;
+        margin: 0px !important; 
+        padding: 0px !important; 
+        vertical-align: top !important;
+      }
+
+      table {
+        border: 0px; 
+        border-spacing: 0; 
+        border-collapse: collapse;
+      }
+
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }
+
+      /*****
+      Images
+      *****/
+      img[class=resizable_image]{
+        height: auto !important;
+        width: 100% !important;
+      }
+      img[class=resizable_image_small]{
+        height: auto !important;
+        max-width: 240px !important;
+        width: 100% !important;
+      }
+
+      /******
+      Columns
+      ******/
+      @media only screen and (max-width: 620px){
+        table[class=body_single_column_wrapper],
+        table[class=body_double_column_wrapper],
+        table[class=body_triple_column_wrapper]{
+          max-width: 600px !important;
+          width: 100% !important;
+        }
+        
+        table[class=body_double_col_left],
+        table[class=body_double_col_right],
+        table[class=body_triple_column_wrapper],
+        table[class=body_triple_column_padding],
+        table[class=body_triple_column],
+        td[class=body_triple_column],
+        td[class=responsive_column]{
+          width: 100% !important;
+        }
+
+        td[class=body_triple_column],
+        td[class=responsive_column]{
+          max-width: 100% !important;
+        }
+
+
+        /*
+        -Used to deactivate responsive code in certain mobile apps that do not support responsive design
+        -Elements with this declaration must have a fixed min-width set for this to work
+        */
+        .override_main {
+          min-width: 100% !important;
+        }
+      }
+
+      /*****************
+      Responsive Buttons
+      *****************/
+      @media only screen 
+      and (max-width : 620px){ 
+        p[class=cta_wrap] {
+          background-color: #ccc !important;
+          margin: 0 auto !important;
+          max-width: 55% !important;
+          padding: 15px !important;
+          text-align: center !important;
+        }
+        p[class=cta] {
+          color: #444 !important;
+          display: block !important;
+          height: 100% !important;
+          width: 100% !important;
+        }
+
+        /*********
+        Typography
+        *********/
+        .body_single_column_wrapper td,
+        .body_single_column_wrapper a,
+        .responsive_column td,
+        .responsive_column a
+        {
+          font-size: 16px !important;
+          line-height: 160% !important;
+        }
+
+        #header_wrapper td,
+        #header_wrapper a{
+
+          font-size: 14px !important; 
+          line-height: 125% !important;
+        }
+
+        .body_single_column_wrapper td.title,
+        .body_single_column_wrapper td.title a,
+        .body_triple_column_wrapper td.title,
+        .body_triple_column_wrapper td.title a
+        {
+          font-size: 26px !important;
+          line-height: 160% !important;
+        }
+
+        #footer_wrapper td,
+        #footer_wrapper a{
+
+          font-size: 14px !important; 
+          line-height: 160% !important;
+        }
+        
+        td.main_message,
+        td.main_message a
+        {
+          font-size: 20px !important;
+          line-height: 160% !important;
+        }
+
+      }
+    </style>
+
+
+  </head>
+  <body style="margin: 0px; padding: 0px 0px 0px 0px; vertical-align: top; height: 100% !important; width: 100% !important;">
+    <table style="width:100%">
+      <tr>
+        <td align="center" width="100%" style="color: #444444; font-family: arial, helvetica, sans-serif; padding: 0px 0px 0px 0px; margin: 0px; vertical-align: top; background-color: #f2f2f2; min-width:100%;">
+          <table>
+            <tr>
+              <td class="override_main" border=0 cellspacing=0 cellpadding=0 style="width: 600px; min-width:600px;">
+                <table style="width:100%">
+                  <tr>
+                    <td align="center" style="padding: 10px 0px 0px 0px; margin: 0px; font-size: 12px; width:100%;">Pre-Header: Enticing text to support subject line.</td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding: 5px 0px 30px 0px; margin: 0px; font-size: 10px; width:100%;"><a href="#" style="color:#999;">Add us to your address book</a> | <a href="#" style="color:#999;">Unsubscribe from these emails.</a></td>
+                  </tr>
+                </table>
+                <table id="header_wrapper" border=0 cellspacing=0 cellpadding=0>
+                  <tr>
+                    <td style="padding: 0px 0px 0px 0px; margin: 0px; vertical-align: top;">
+                      <table border=0 cellspacing=0 cellpadding=0 style="width: 100%;">
+                        <tr>
+                          <!-- LOGOS AND BRANDING -->
+                          <td align="left" style="padding: 10px 0px 10px 0px; margin: 0px; text-align: left; width: 300px;">
+                            <a href="#" title="I am a placeholder." style="border:0;"><img src="http://placehold.it/150x30" border="0" alt="holding a place" /></a>
+                          </td>
+                          <td align="right" style="padding: 10px 0px 10px 0px; margin: 0px; text-align: right; width: 300px;">
+                            <a href="#" title="I, too, am a placeholder." style="border:0;"><img src="http://placehold.it/150x30" border="0" alt="holding a place" /></a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table border=0 cellspacing=0 cellpadding=0>
+                  <tr>
+                    <td style="padding: 0px 0px 0px 0px; margin: 0px; vertical-align: top; text-align: left; background-color: #fff; border: 1px solid #ccc;">
+                      
+                      <!-- HEADER IMAGE 
+                        The aspect ratio of the images in this template will not change in its
+                        responsive state. Keep this in mind when selecting images, as the same
+                        version will be served to both desktop and mobile users.
+                      -->
+
+                      <a href="#" title="The header will link to the full report and also be specific to the content of the email." style="border:0;"><img class="resizable_image" src="http://placehold.it/600x150" border="0" style="max-width: 600px !important;" alt="Header Image"/></a>
+
+                      <!-- Single Column -->
+                      <table class="body_single_column_wrapper" border=0 cellspacing=0 cellpadding=0>
+                        <tr>
+                          <td style="background-color: #444; padding: 15px; margin: 0px; vertical-align: top; font-family: georgia, 'times new roman', serif; font-style: italic; color: #fff; text-align: right; font-size: 14px; width:570px;">
+                            
+                            <!-- MESSAGE DATE -->
+                            Monthtober 32, 2032
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 0px 0px 0px 0px; margin: 0px; vertical-align: top;">
+                            <table border=0 cellspacing=0 cellpadding=0>
+                              <tr>
+                                <td style="padding: 0px 30px 30px 30px; margin: 0px; vertical-align: top;">
+                                  <table border=0 cellspacing=0 cellpadding=0>
+                                    <tr>
+                                      <td class="title" style="font-family: georgia, 'times new roman', serif; color: #444444; font-size: 26px; line-height: 46px; padding: 15px 0px 15px 0px; margin: 0px; vertical-align: top;">
+                                        
+                                        <!-- MESSAGE TITLE -->
+                                        A really impressive title.
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="vertical-align: top; padding-bottom: 15px;">
+
+                                        <!-- HERO IMAGE -->
+                                        <img src="http://placehold.it/540x250" class="resizable_image" style="width: 100%;" />
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <!-- MAIN MESSAGE -->
+                                      <td class="main_message" style="color: #444444; font-family: arial, helvetica, sans-serif; font-size: 14px; line-height: 29px; vertical-align: top; padding: 0px 0px 0px 0px;">
+                                        Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. <a href="#" title="A contextual link to this article or section.">Dramatically visualize customer directed convergence</a> without revolutionary ROI.
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <!-- PRIMARY CTA -->
+                                      <td style="color: #444444; font-family: arial, helvetica, sans-serif; font-size: 14px; line-height: 29px; vertical-align: top; padding: 20px 0px 0px 0px; text-align: center;" align="center">
+                                        <table align="center" width="50%">
+                                          <tbody>
+                                            <tr>
+                                              <td style="background-color:#ccc;padding:15px;text-align:center;">
+                                                <a href="#" title="A call to action." style="font-family: arial, helvetica, sans-serif;color:#444;display:block;height:100%;width:100%;" target="_blank">Learn more!</a>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table><!-- </single> -->
+
+                      <!-- Triple Column -->
+                      <table width="600" class="body_triple_column_wrapper" border=0 cellspacing=0 cellpadding=0 style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                        <tr>
+                          <td class="body_triple_column_padding" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0px 15px 0px 15px; width: 570px;">
+
+                            <!-- COLUMN 1 -->
+                            <table class="body_triple_column" align="left" border=0 cellspacing=0 cellpadding=0 style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 188px;">
+                              <tr>
+                                <td style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0px 0px 0px 0px; margin: 0px; vertical-align: top;">
+                                  <table border=0 cellspacing=0 cellpadding=0>
+                                    <tr>
+                                      <td class="responsive_column" style="padding: 30px 15px 30px 15px; border-top: 1px dotted #ccc; margin: 0px; vertical-align: top;">
+                                        <table border=0 cellspacing=0 cellpadding=0>
+                                          <tr>
+                                            <td style="padding: 0px 0px 0px 0px; margin: 0px; vertical-align: top;">
+
+                                              <table cellpadding="0" cellspacing="0" border="0" style="padding: 0px 0px 0px 0px;">
+                                                <tr>
+                                                  <td style="vertical-align: top; padding: 0px 0px 10px 0px; text-align: center;">
+                                                    <img src="http://placehold.it/240x120" class="resizable_image_small" style="display: block; margin:0 auto; max-width: 158px; width: 158px;" width="158" />
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="color: #444444; font-family: arial, helvetica, sans-serif; font-size: 12px; line-height: 20px; vertical-align: top; padding: 0px 0px 0px 0px;">
+                                                    <p>1. Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for clicks-and-mortar solutions.</p>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td valign="bottom" style="color: #444444; font-family: arial, helvetica, sans-serif; font-size: 12px; line-height: 20px; vertical-align: top; padding: 0px 0px 0px 0px;">
+                                                    <p class="cta_wrap"><a href="#" title="A responsive call to action." class="cta">Learn more!</a></p>
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+
+                            <!-- COLUMN 2 -->
+                            <table class="body_triple_column" align="left" border=0 cellspacing=0 cellpadding=0 style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 188px;">
+                              <tr>
+                                <td style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0px 0px 0px 0px; margin: 0px; vertical-align: top;">
+                                  <table border=0 cellspacing=0 cellpadding=0>
+                                    <tr>
+                                      <td class="responsive_column" style="padding: 30px 15px 30px 15px; border-top: 1px dotted #ccc; margin: 0px; vertical-align: top;">
+                                        <table border=0 cellspacing=0 cellpadding=0>
+                                          <tr>
+                                            <td style="padding: 0px 0px 0px 0px; margin: 0px; vertical-align: top;">
+
+                                              <table cellpadding="0" cellspacing="0" border="0" style="padding: 0px 0px 0px 0px;">
+                                                <tr>
+                                                  <td style="vertical-align: top; padding: 0px 0px 10px 0px; text-align: center;">
+                                                    <img src="http://placehold.it/240x120" class="resizable_image_small" style="display: block; margin:0 auto; max-width: 158px; width: 158px;" width="158" />
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="color: #444444; font-family: arial, helvetica, sans-serif; font-size: 12px; line-height: 20px; vertical-align: top; padding: 0px 0px 0px 0px;">
+                                                    <p>2. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art technology.</p>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td valign="bottom" style="color: #444444; font-family: arial, helvetica, sans-serif; font-size: 12px; line-height: 20px; vertical-align: top; padding: 0px 0px 0px 0px;">
+                                                    <p class="cta_wrap"><a href="#" title="A responsive call to action." class="cta">Learn more!</a></p>
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            
+                            <!-- COLUMN 3 -->
+                            <table class="body_triple_column" align="left" border=0 cellspacing=0 cellpadding=0 style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 188px;">
+                              <tr>
+                                <td style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0px 0px 0px 0px; margin: 0px; vertical-align: top;">
+                                  <table border=0 cellspacing=0 cellpadding=0>
+                                    <tr>
+                                      <td class="responsive_column" style="padding: 30px 15px 30px 15px; border-top: 1px dotted #ccc;  margin: 0px; vertical-align: top;">
+                                        <table border=0 cellspacing=0 cellpadding=0>
+                                          <tr>
+                                            <td style="padding: 0px 0px 0px 0px; margin: 0px; vertical-align: top;">
+                                              <table cellpadding="0" cellspacing="0" border="0" style="padding: 0px 0px 0px 0px;">
+                                                <tr>
+                                                  <td style="vertical-align: top; padding: 0px 0px 10px 0px; text-align: center;">
+                                                    <img src="http://placehold.it/240x120" class="resizable_image_small" style="display: block; margin:0 auto; max-width: 158px; width: 158px;" width="158"/>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="color: #444444; font-family: arial, helvetica, sans-serif; font-size: 12px; line-height: 20px; vertical-align: top; padding: 0px 0px 0px 0px;">
+                                                    <p>3. Completely synergize resource sucking relationships via premier niche markets. Dynamically innovate resource-leveling customer service.</p>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td valign="bottom" style="color: #444444; font-family: arial, helvetica, sans-serif; font-size: 12px; line-height: 20px; vertical-align: top; padding: 0px 0px 0px 0px;">
+                                                    <p class="cta_wrap"><a href="#" title="A responsive call to action." class="cta">Learn more!</a></p>
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table><!-- </triple> -->
+                      
+
+                      <!-- FOOTER -->
+                      <table id="footer_wrapper" border=0 cellspacing=0 cellpadding=0>
+                        <tr>
+                          <td width="600" style="padding: 0px 0px 0px 0px; margin: 0px; vertical-align: top; background-color: #fff;">
+                            <table id="header_wrapper" border=0 cellspacing=0 cellpadding=0>
+                              <tr>
+                                <td width="600" style="background-color: #444; padding: 0px 0px 0px 0px; margin: 0px; vertical-align: top;">
+                                  <table border=0 cellspacing=0 cellpadding=0 style="width: 100%;">
+                                    <tr>
+                                      <td style="padding: 10px 10px 10px 10px; margin: 0px; width: 50%;">
+                                        <a href="#" title="I, too, am also a placeholder."><img src="http://placehold.it/100x20" border="0" alt="holding a place"/></a>
+                                      </td>
+                                      <td style="padding: 10px 10px 10px 10px; margin: 0px; text-align: right; width: 50%;">
+                                        <a href="#" title="I am also a placeholder, as well."><img src="http://placehold.it/100x20"  border="0" alt="holding a place"/></a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="600" style="background-color:#ccc; padding: 0px 0px 0px 0px; margin: 0px; vertical-align: top;">
+                            <table border=0 cellspacing=0 cellpadding=0>
+                              <tr>
+                                <td style="font-family: arial, helvetica, sans-serif; color: #444444; font-size: 11px; line-height: 29px; padding: 30px 30px 30px 30px; margin: 0px; vertical-align: top;">
+                                  <p>Each Contributor disclaims any liability incurred by the laws of the Work as distributed under Clause 4, above. Distribution of Derivative Works. You may choose not to license them at all. For example, a Contributor with its exercise of permissions under this Agreement and any other right or remedy of any form resulting from mechanical transformation or translation of a contract shall be subject to the program.</p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table><!-- </footer> -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="600" style="padding: 0px 0px 0px 0px; margin: 0px; vertical-align: top;">
+                      <table border=0 cellspacing=0 cellpadding=0>
+                        <tr>
+                          <td width="600" style="font-family: arial, helvetica, sans-serif; color: #444444; font-size: 11px; line-height: 29px; padding: 15px 30px 30px 30px; margin: 0px; vertical-align: top; text-align:center;">
+                            <a href="#" style="color:#999;">Add us to your address book</a> | <a href="#" style="color:#999;">Update your email preferences.</a> | <a href="#" style="color:#999;">Unsubscribe from these emails.</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
